@@ -1,0 +1,18 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             version="1.0">
+	<persistence-unit name="DemoOpenJPA" transaction-type="RESOURCE_LOCAL">
+
+		<class>org.example.openjpa.entities.Person</class>
+
+		<properties>
+			<property name="openjpa.jbdc.Schema" value="Demo"/>
+			<property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema"/>
+			<property name="openjpa.ConnectionDriverName" value="org.postgresql.Driver"/>
+			<property name="openjpa.ConnectionURL" value="jdbc:postgresql://localhost:5432/demoopenjpa"/>
+			<property name="openjpa.ConnectionUserName" value="demo"/>
+			<property name="openjpa.ConnectionPassword" value="demo"/>
+			<property name="openjpa.Log" value="SQL=Trace" />
+
+		</properties>
+	</persistence-unit>
+</persistence>
